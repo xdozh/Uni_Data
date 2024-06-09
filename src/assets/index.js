@@ -4,7 +4,7 @@ import resourcelibSymbol from "./resourcelib-symbol.png";
 import resourcelibWhiteSymbol from "./resourcelib-symbol-white.png";
 import play from "./play.svg";
 import gradient from "./gradient.png";
-import smallSphere from "./4-small.png";
+import cen from "./cen.png";
 import grid from "./grid.png";
 import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
@@ -84,7 +84,7 @@ export {
   resourcelibWhiteSymbol,
   play,
   gradient,
-  smallSphere,
+  cen,
   grid,
   yourlogo,
   homeSmile,
