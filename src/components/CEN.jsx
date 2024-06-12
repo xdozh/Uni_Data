@@ -1,8 +1,8 @@
 import Section from "./Section";
 import { cen, stars } from "../assets";
 import Heading from "./Heading";
-import PricingList from "./PricingList";
-import { LeftLine, RightLine } from "./design/Pricing";
+import CourseCard from "./CourseCard.jsx";  // Ensure the import name matches the export
+import { CenCourses } from "../constants";     // Import CenCourses here
 
 const CEN = () => {
     return (
@@ -32,19 +32,8 @@ const CEN = () => {
                     title="Resources related to CEN courses"
                 />
 
-                <div className="relative">
-                    <PricingList />
-                    <LeftLine />
-                    <RightLine />
-                </div>
-
-                <div className="flex justify-center mt-10">
-                    <a
-                        className="text-xs font-code font-bold tracking-wider uppercase border-b"
-                        href="/CEN.jsx"
-                    >
-                        See the full details
-                    </a>
+                <div className='mt-20 flex flex-wrap gap-7'>
+                    <CourseCard courses={CenCourses} />
                 </div>
             </div>
         </Section>

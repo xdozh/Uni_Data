@@ -20,6 +20,11 @@ import chromecast from "./chrome-cast.svg";
 import sliders04 from "./sliders-04.svg";
 import loading from "./loading.png";
 import background from "./background.jpg";
+import cmp_coe from "./cmp_coe.png";
+import cve from "./cve.png";
+import ele from "./ele.png";
+import mce from "./mce.png";
+import ngn from "./ngn.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -85,6 +90,11 @@ export {
   play,
   gradient,
   cen,
+  cmp_coe,
+  cve,
+  mce,
+  ngn,
+  ele,
   grid,
   yourlogo,
   homeSmile,

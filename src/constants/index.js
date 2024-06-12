@@ -34,6 +34,9 @@ import {
     telegram,
     twitter,
     yourlogo,
+    cmp_coe,
+    cve,
+    ele, mce, ngn,
 } from "../../src/assets";
 
 export const navigation = [
@@ -193,40 +196,42 @@ export const collabApps = [
     },
 ];
 
-export const pricing = [
+export const CenCourses = [
     {
         id: "0",
-        title: "Basic",
-        description: "AI chatbot, personalized recommendations",
-        price: "0",
-        features: [
-            "An AI chatbot that can understand your queries",
-            "Personalized recommendations based on your preferences",
-            "Ability to explore the app and its features without any cost",
-        ],
+        title: "Computer Science & Engineering",
+        description: "All the materials related to COE & CMP courses",
+        image: cmp_coe,
+        url: 'https://drive.google.com/drive/folders/1l_jCmXJVZj_zIe13CKcqkP878zt5VSmO?usp=share_link'
     },
     {
         id: "1",
-        title: "Premium",
-        description: "Advanced AI chatbot, priority support, analytics dashboard",
-        price: "9.99",
-        features: [
-            "An advanced AI chatbot that can understand complex queries",
-            "An analytics dashboard to track your conversations",
-            "Priority support to solve issues quickly",
-        ],
+        title: "Mechanical Engineer",
+        description: "All the materials related to Mechanical Engineering courses",
+        image: mce,
+        url: 'https://drive.google.com/drive/folders/1WSfHLWZ32Rtx9MDTyP_SeD5C9K47WABH?usp=share_link'
     },
     {
         id: "2",
-        title: "Enterprise",
-        description: "Custom AI chatbot, advanced analytics, dedicated account",
-        price: null,
-        features: [
-            "An AI chatbot that can understand your queries",
-            "Personalized recommendations based on your preferences",
-            "Ability to explore the app and its features without any cost",
-        ],
+        title: "Civil Engineer",
+        description: "All the materials related to Civil Engineering courses",
+        image: cve,
+        url: 'https://drive.google.com/drive/folders/1YmujdEq8VhtDAPNbNySnxpiYLFGO7FXq?usp=share_link'
     },
+    {
+        id: "3",
+        title: "Electrical Engineer",
+        description: "All the materials related to Electrical Engineering courses",
+        image: ele,
+        url: 'https://drive.google.com/drive/folders/1DE5jRnhbkHeU0BeI9jqSo8d9cTfpROtH?usp=share_link'
+    },
+    {
+        id: "4",
+        title: "Introduction to Engineering (NGN)",
+        description: "All the materials related to NGN courses",
+        image: ngn,
+        url: 'https://drive.google.com/drive/folders/1_iEeaj-BIfIzAAgXbqKPJJf6jfezB9O8?usp=share_link'
+    }
 ];
 
 export const benefits = [
