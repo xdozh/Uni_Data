@@ -25,6 +25,7 @@ import cve from "./cve.png";
 import ele from "./ele.png";
 import mce from "./mce.png";
 import ngn from "./ngn.png";
+import sba from "./sba.png";
 
 import curve from "./hero/curve.png";
 import robot from "./hero/robot.jpg";
@@ -63,12 +64,6 @@ import notification3 from "./notification/image-3.png";
 import notification4 from "./notification/image-4.png";
 
 import cas from "./cas_images/cas.png"
-import casCard1 from "./cas_images/card-1.svg";
-import casCard2 from "./cas_images/card-2.svg";
-import casCard3 from "./cas_images/card-3.svg";
-import casCard4 from "./cas_images/card-4.svg";
-import casCard5 from "./cas_images/card-5.svg";
-import casCard6 from "./cas_images/card-6.svg";
 import casIcon1 from "./cas_images/icon-1.svg";
 import casIcon2 from "./cas_images/icon-2.svg";
 import casIcon3 from "./cas_images/icon-3.svg";
@@ -96,6 +91,7 @@ export {
   mce,
   ngn,
   ele,
+  sba,
   grid,
   yourlogo,
   homeSmile,
@@ -140,12 +136,6 @@ export {
   notification3,
   notification4,
   cas,
-  casCard1,
-  casCard2,
-  casCard3,
-  casCard4,
-  casCard5,
-  casCard6,
   casIcon1,
   casIcon2,
   casIcon3,
