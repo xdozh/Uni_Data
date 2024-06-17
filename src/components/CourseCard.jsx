@@ -4,7 +4,6 @@ import { fadeIn } from '../utils/motion';
 
 const CourseCard = ({ courses }) => {
     return (
-        // Change flex to grid and set up the grid properties
         <div className="grid grid-cols-3 gap-[1rem] max-lg:grid-cols-1">
             {courses.map((item, index) => (
                 <motion.div
