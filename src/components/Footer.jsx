@@ -9,6 +9,9 @@ const Footer = () => {
                 <p className="caption text-n-4 lg:block">
                     © {new Date().getFullYear()}. All rights reserved.
                 </p>
+                <p className="caption text-n-2 lg:block">
+                    We own no data as we have previously mentioned all our sources
+                </p>
 
                 <ul className="flex gap-5 flex-wrap">
                     {socials.map((item) => (
