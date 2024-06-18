@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import { SpeedInsights } from '@vercel/speed-insights/react';
 
 import ButtonGradient from "./assets/svg/ButtonGradient";
@@ -12,7 +11,7 @@ import Footer from "./components/Footer.jsx";
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <>
             <div className="pt-[4,75rem] lg:pt-[5.25rem] overflow-hidden">
                 <Header />
                 <Hero/>
@@ -25,7 +24,7 @@ const App = () => {
 
             <ButtonGradient/>
             <SpeedInsights/>
-        </BrowserRouter>
+        </>
     )
 }
 export default App
