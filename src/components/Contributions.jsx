@@ -66,11 +66,11 @@ const Contributions = () => {
                 </div>
                 <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                            onClick={() => window.location.href = 'https://forms.gle/gcQZSqcXszio9CXc6'}>
+                            onClick={() => window.location.href = 'https://forms.gle/FgLVFdJQN9ECnoMp9'}>
                         Contribute
                     </button>
                     <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                            onClick={() => window.location.href = 'https://forms.gle/gcQZSqcXszio9CXc6'}>
+                            onClick={() => window.location.href = 'https://forms.gle/or2Rs7p7jaFP8G5F6'}>
                         Give Feedback
                     </button>
                     <Gradient/>

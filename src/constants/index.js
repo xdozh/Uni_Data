@@ -99,12 +99,12 @@ export const Contribution = [
     {
         id: "3",
         title: "Feedback",
-        url: "https://forms.gle/gcQZSqcXszio9CXc6",
+        url: "https://forms.gle/or2Rs7p7jaFP8G5F6",
     },
     {
         id: "4",
         title: "Contribute",
-        url: "https://forms.gle/gcQZSqcXszio9CXc6",
+        url: "https://forms.gle/FgLVFdJQN9ECnoMp9",
     },
 
 ];
