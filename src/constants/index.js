@@ -20,10 +20,6 @@ import {
     raindrop,
     recording01,
     recording03,
-    roadmap1,
-    roadmap2,
-    roadmap3,
-    roadmap4,
     searchMd,
     slack,
     sliders04,
@@ -78,40 +74,39 @@ export const brainwaveServicesIcons = [
     sliders04,
 ];
 
-export const roadmap = [
+export const Contribution = [
     {
         id: "0",
-        title: "Voice recognition",
-        text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-        date: "May 2023",
-        status: "done",
-        imageUrl: roadmap1,
+        title: "SBA Materials",
+        text: "SBA Resources collected via students",
+        url: "https://docs.google.com/document/d/1LEzI3e0kGnxn29p9RT8-SIZkJ6Acm0FYWKVByO5j_RA/edit?usp=sharing",
         colorful: true,
     },
     {
         id: "1",
-        title: "Gamification",
-        text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-        date: "May 2023",
-        status: "progress",
-        imageUrl: roadmap2,
+        title: "CEN Materials",
+        text: "CEN Resources collected via students",
+        url: "https://docs.google.com/document/d/1LEzI3e0kGnxn29p9RT8-SIZkJ6Acm0FYWKVByO5j_RA/edit?usp=sharing",
+        colorful: true,
     },
     {
         id: "2",
-        title: "Chatbot customization",
-        text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-        date: "May 2023",
-        status: "done",
-        imageUrl: roadmap3,
+        title: "CAS Materials",
+        text: "CAS Resources collected via students",
+        url: "https://docs.google.com/document/d/1LEzI3e0kGnxn29p9RT8-SIZkJ6Acm0FYWKVByO5j_RA/edit?usp=sharing",
+        colorful: true,
     },
     {
         id: "3",
-        title: "Integration with APIs",
-        text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-        date: "May 2023",
-        status: "progress",
-        imageUrl: roadmap4,
+        title: "Feedback",
+        url: "https://forms.gle/gcQZSqcXszio9CXc6",
     },
+    {
+        id: "4",
+        title: "Contribute",
+        url: "https://forms.gle/gcQZSqcXszio9CXc6",
+    },
+
 ];
 
 export const collabText =
