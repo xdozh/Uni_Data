@@ -69,7 +69,7 @@ const CAS = () => {
 
                 <Heading
                     tag="Time to react and aim for better grades"
-                    title="Resources related to CAS courses"
+                    title="Resources related to CAS"
                 />
 
                 <div className="flex justify-center mt-15">

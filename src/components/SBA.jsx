@@ -75,7 +75,7 @@ const SBA = () => {
                 </div>
                 <Heading
                     tag="Time to invest in your courses"
-                    title="Resources related to SBA courses"
+                    title="Resources related to SBA"
                 />
                 {renderCards(sbacourse)}
             </div>

@@ -29,7 +29,7 @@ const CEN = () => {
 
                 <Heading
                     tag="Gear up for better grades"
-                    title="Resources related to CEN courses"
+                    title="Resources related to CEN"
                 />
 
                 <div className='mt-20 flex flex-wrap gap-7'>

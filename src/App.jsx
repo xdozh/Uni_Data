@@ -4,7 +4,7 @@ import Hero from "./components/Hero.jsx";
 import CAS from "./components/CAS.jsx";
 import SBA from "./components/SBA.jsx";
 import CEN from "./components/CEN.jsx";
-import Roadmap from "./components/Roadmap.jsx";
+import Contributions from "./components/Contributions.jsx";
 import Footer from "./components/Footer.jsx";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
                 <CAS/>
                 <SBA/>
                 <CEN/>
-                <Roadmap/>
+                <Contributions/>
                 <Footer/>
             </div>
 
