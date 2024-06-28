@@ -229,6 +229,7 @@ export const cas_courses = [
     {
         id: "0",
         title: "Chemistry",
+        category: "Sciences",
         text: "Study items related to Chemistry courses",
         url: "https://drive.google.com/drive/folders/1Gt9Wsc5Y-IF5hEEm4qlDP8Un8lLxwjif?usp=share_link",
         imageUrl: casImage2,
@@ -236,6 +237,7 @@ export const cas_courses = [
     {
         id: "1",
         title: "Physics",
+        category: "Sciences",
         text: "Study items related to Physics courses",
         url: "https://drive.google.com/drive/folders/1J2SWUCo5csAlC-oK7WlUBYH1Zs-LiQkr?usp=share_link",
         imageUrl: casImage2,
@@ -244,6 +246,7 @@ export const cas_courses = [
     {
         id: "2",
         title: "Biology",
+        category: "Sciences",
         text: "Course items related to Biology courses",
         url:"https://drive.google.com/drive/folders/1KilrjoqNbbiWsb0RBALi_v8rDeEqzPGz?usp=share_link",
         imageUrl: casImage2,
@@ -251,6 +254,7 @@ export const cas_courses = [
     {
         id: "3",
         title: "Environmental Science",
+        category: "Sciences",
         text: "Study items related to Environmental Science courses",
         url:'https://drive.google.com/drive/folders/1-l4E3l6_hfKxZPjc8BAxXQLg4edT_wqt?usp=share_link',
         imageUrl: casImage2,
@@ -258,6 +262,7 @@ export const cas_courses = [
     {
         id: "4",
         title: "Psychology",
+        category: "Sciences",
         text: "Study items related to Psychology courses",
         url:"https://drive.google.com/drive/folders/11TIEtROeH_k7qI-xGzfDq-kSUdF2ZITa?usp=share_link",
         imageUrl: casImage2,
@@ -265,6 +270,7 @@ export const cas_courses = [
     {
         id: "5",
         title: "Philosophy",
+        category: "Sciences",
         text: "Course items related to Philosophy course",
         url:"https://drive.google.com/drive/folders/1vfUt9G0AFqh7Q9fwgxaGg5AvoeKmhI7R?usp=share_link",
         imageUrl: casImage2,
@@ -272,14 +278,15 @@ export const cas_courses = [
     {
         id: "6",
         title: "Math & Stats",
+        category: "Mathematics",
         text: "Study items related to Math & Stats courses",
         url: "https://drive.google.com/drive/folders/14oeoOReuojphQsAXb60C8ook5QRc15fW?usp=share_link",
         imageUrl: casImage2,
-        light: true,
     },
     {
         id: "7",
         title: "Quantitative Buss. Analysis",
+        category: "Mathematics",
         text: "Course items related to QBA",
         url:"https://drive.google.com/drive/folders/1OY2KUUMDwJ7Ng5uCSjhn6fhOQDfeLl9Y?usp=share_link",
         imageUrl: casImage2,
@@ -287,6 +294,7 @@ export const cas_courses = [
     {
         id: "8",
         title: "Arabic 101 & 102",
+        category: "Math",
         text: "Course items related to ARA 101 & 102 courses",
         url:"https://drive.google.com/drive/folders/1hXi1VIi8ZPvsYypgg_lEE1ZjZ0UjR8uV?usp=share_link",
         imageUrl: casImage2,
@@ -295,6 +303,7 @@ export const cas_courses = [
     {
         id: "9",
         title: "Mass Comm.",
+        category: "General Education",
         text: "Course items related to Mass Comm. courses",
         url:"https://drive.google.com/drive/folders/1AXMcvFsDM2HmPfqSfWTeg5jzqPscmmfI?usp=share_link",
         imageUrl: casImage2,
@@ -302,6 +311,7 @@ export const cas_courses = [
     {
         id: "10",
         title: "Art History",
+        category: "General Education",
         text: "Course items related to Art History course",
         url:"https://drive.google.com/drive/folders/19BAy7Io8Ce-xqvzY5C0bdT1BcMKgqQdx?usp=share_link",
         imageUrl: casImage2,
@@ -310,6 +320,7 @@ export const cas_courses = [
     {
         id: "11",
         title: "Geography",
+        category: "General Education",
         text: "Course items related to Geography courses",
         url:"https://drive.google.com/drive/folders/1l1Ng8tm79nlNR-UNIC1UKnvSCZAU_HD9?usp=share_link",
         imageUrl: casImage2,
@@ -317,6 +328,7 @@ export const cas_courses = [
     {
         id: "12",
         title: "International Studies",
+        category: "General Education",
         text: "Course items related to INS courses",
         url:"https://drive.google.com/drive/folders/1B26FOF2Jq57vY_lK9fAdeMeDy1xEHuj8?usp=share_link",
         imageUrl: casImage2,
@@ -324,6 +336,7 @@ export const cas_courses = [
     {
         id: "13",
         title: "Sociology",
+        category: "General Education",
         text: "Course items related to Sociology course",
         url:"https://drive.google.com/drive/folders/1vJjP2ZeqDsCGMnnEA9meR4ssiXB4XRyG?usp=share_link",
         imageUrl: casImage2,
@@ -331,6 +344,7 @@ export const cas_courses = [
     {
         id: "14",
         title: "World Cultures",
+        category: "General Education",
         text: "Course items related to World Cultures course",
         url:"https://drive.google.com/drive/folders/1xaT-uIlLH7psqLOvlt0JDCRQ4lQ2ZnDo?usp=share_link",
         imageUrl: casImage2,
@@ -339,6 +353,7 @@ export const cas_courses = [
     {
         id: "15",
         title: "Writing",
+        category: "Language",
         text: "Course items related to WRI courses",
         url:"https://drive.google.com/drive/folders/10CmWqShCx_TFM7SZGPN9GKHPzBUh7zQ9?usp=share_link",
         imageUrl: casImage2,
@@ -346,6 +361,7 @@ export const cas_courses = [
     {
         id: "16",
         title: "English",
+        category: "Language",
         text: "Course items related to ENG courses",
         url:"https://drive.google.com/drive/folders/1A0Z1RqbaRtYTUQ6n4yCAw7AcVl33OVbD?usp=share_link",
         imageUrl: casImage2,

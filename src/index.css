@@ -86,3 +86,36 @@
 .-rotate-360 {
     @apply rotate-[-360deg];
 }
+
+.title-card {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.title-card:hover {
+    background-color: #e0e0e0;
+}
+
+.heading {
+    transition: transform 0.3s ease, margin 0.3s ease;
+}
+
+.active {
+    transform: scale(1.2);
+    margin: 0 auto; /* Center the active heading */
+}
+
+.flex.justify-between .heading:not(.active) {
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+.subtitle {
+    font-size: 25px; /* Adjust the font size as needed */
+    margin-top: 8px; /* Spacing from the title */
+}
+

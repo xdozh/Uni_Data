@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { cas_courses } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
@@ -7,18 +8,46 @@ import ClipPath from "../assets/svg/ClipPath";
 import { cas } from "../assets/index.js";
 
 const CAS = () => {
+    // Courses sliced into different categories
     const sciencesCourses = cas_courses.slice(0, 6);
     const mathematicsCourses = cas_courses.slice(6, 8);
-    const gerCourses = cas_courses.slice(8,15);
+    const gerCourses = cas_courses.slice(8, 15);
     const engCourses = cas_courses.slice(15);
 
+    // State hooks for toggling visibility
+    const [showSciences, setShowSciences] = useState(false);
+    const [showMathematics, setShowMathematics] = useState(false);
+    const [showGerCourses, setShowGerCourses] = useState(false);
+    const [showEngCourses, setShowEngCourses] = useState(false);
+
+    // Toggle function
+    const toggleCourses = (section) => {
+        switch (section) {
+            case 'sciences':
+                setShowSciences(!showSciences);
+                break;
+            case 'mathematics':
+                setShowMathematics(!showMathematics);
+                break;
+            case 'ger':
+                setShowGerCourses(!showGerCourses);
+                break;
+            case 'eng':
+                setShowEngCourses(!showEngCourses);
+                break;
+            default:
+                break;
+        }
+    };
+
+    // Function to render cards
     const renderCards = (courses) => (
         <div className="flex flex-wrap gap-10 mb-10">
             {courses.map((item) => (
                 <a href={item.url} className="flex items-center mt-auto text-n-1 no-underline" key={item.id}>
                     <div
                         className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-                        style={{ backgroundImage: `url(${item.backgroundUrl})` }}
+                        style={{backgroundImage: `url(${item.backgroundUrl})`}}
                     >
                         <div className="relative z-2 flex flex-col min-h-[5rem] p-[2.4rem] pointer-events-none">
                             <h5 className="h5 mb-5">{item.title}</h5>
@@ -27,13 +56,13 @@ const CAS = () => {
                                 <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                                     Study Now
                                 </p>
-                                <Arrow />
+                                <Arrow/>
                             </div>
                         </div>
 
-                        {item.light && <GradientLight />}
+                        {item.light && <GradientLight/>}
 
-                        <div className="absolute inset-0.5 bg-n-8" style={{ clipPath: "url(#cas_images)" }}>
+                        <div className="absolute inset-0.5 bg-n-8" style={{clipPath: "url(#cas_images)"}}>
                             <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
                                 {item.imageUrl && (
                                     <img
@@ -47,12 +76,13 @@ const CAS = () => {
                             </div>
                         </div>
 
-                        <ClipPath />
+                        <ClipPath/>
                     </div>
                 </a>
             ))}
         </div>
     );
+
 
     return (
         <Section id="cas">
@@ -72,28 +102,27 @@ const CAS = () => {
                     title="Resources related to CAS"
                 />
 
-                <div className="flex justify-center mt-15">
-                    <Heading title="Sciences" />
+                <div className="flex justify-around mt-15">
+                    <div onClick={() => toggleCourses('sciences')}>
+                        <Heading subtitle="Sciences"/>
+                    </div>
+                    <div onClick={() => toggleCourses('mathematics')}>
+                        <Heading subtitle="Mathematics"/>
+                    </div>
+                    <div onClick={() => toggleCourses('ger')}>
+                        <Heading subtitle="General Education Requirements"/>
+                    </div>
+                    <div onClick={() => toggleCourses('eng')}>
+                        <Heading subtitle="Language"/>
+                    </div>
                 </div>
-                {renderCards(sciencesCourses)}
-
-                <div className="flex justify-center mt-15">
-                    <Heading title="Mathematics" />
-                </div>
-                {renderCards(mathematicsCourses)}
-
-                <div className="flex justify-center mt-15">
-                    <Heading title="General Education Requirements" />
-                </div>
-                {renderCards(gerCourses)}
-
-                <div className="flex justify-center mt-15">
-                    <Heading title="Language" />
-                </div>
-                {renderCards(engCourses)}
+                {showSciences && renderCards(sciencesCourses)}
+                {showMathematics && renderCards(mathematicsCourses)}
+                {showGerCourses && renderCards(gerCourses)}
+                {showEngCourses && renderCards(engCourses)}
             </div>
         </Section>
     );
 };
-
 export default CAS;
+
