@@ -25,6 +25,35 @@ const CAS = () => {
         setShowEngCourses(section === 'eng' ? !showEngCourses : false);
     };
 
+    const sectionUrl = 'src/assets/cas_images/cas_bg.png'
+
+    const renderSectionCard = (title, onClick) => (
+        <div onClick={onClick} className="cursor-pointer">
+            <div className="flex items-center mt-auto text-n-1 no-underline">
+                <div className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+                     style={{backgroundImage: `src/assets/cas_images/cas_bg.png`}}
+                >
+                    <div className="relative z-2 flex flex-col min-h-[5rem] p-[2.4rem] pointer-events-none bg-transparent shadow-md hover:shadow-lg">
+                        <h5 className="h5 mb-5 text-center">{title}</h5>
+                    </div>
+                    <div className="absolute inset-0.5 bg-n-8" style={{clipPath: "url(#cas_images)"}}>
+                        <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                            {sectionUrl && (
+                                <img
+                                    src={sectionUrl}
+                                    width={380}
+                                    height={362}
+                                    alt={title}
+                                    className="w-full h-full object-cover"
+                                />
+                            )}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+
     const renderCards = (courses) => (
         <div className="flex flex-wrap gap-10 mb-10">
             {courses.map((item) => (
@@ -86,18 +115,10 @@ const CAS = () => {
                 />
 
                 <div className="flex justify-around mt-15">
-                    <div onClick={() => toggleCourses('sciences')}>
-                        <Heading subtitle="Sciences"/>
-                    </div>
-                    <div onClick={() => toggleCourses('mathematics')}>
-                        <Heading subtitle="Mathematics"/>
-                    </div>
-                    <div onClick={() => toggleCourses('ger')}>
-                        <Heading subtitle="General Education Requirements"/>
-                    </div>
-                    <div onClick={() => toggleCourses('eng')}>
-                        <Heading subtitle="Language"/>
-                    </div>
+                    {renderSectionCard("Sciences", () => toggleCourses('sciences'))}
+                    {renderSectionCard("Mathematics", () => toggleCourses('mathematics'))}
+                    {renderSectionCard("General Education", () => toggleCourses('ger'))}
+                    {renderSectionCard("Language", () => toggleCourses('eng'))}
                 </div>
                 {showSciences && renderCards(sciencesCourses)}
                 {showMathematics && renderCards(mathematicsCourses)}
@@ -109,4 +130,3 @@ const CAS = () => {
 };
 
 export default CAS;
-
