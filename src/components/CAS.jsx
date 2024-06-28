@@ -6,6 +6,7 @@ import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import { cas } from "../assets/index.js";
+import cas_bg from "../assets/cas_images/cas_bg.png";
 
 const CAS = () => {
     const sciencesCourses = cas_courses.slice(0, 6);
@@ -25,7 +26,7 @@ const CAS = () => {
         setShowEngCourses(section === 'eng' ? !showEngCourses : false);
     };
 
-    const sectionUrl = 'src/assets/cas_images/cas_bg.png'
+    const sectionUrl = cas_bg;
 
     const renderSectionCard = (title, onClick) => (
         <div onClick={onClick} className="cursor-pointer">
