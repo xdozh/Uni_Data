@@ -8,39 +8,23 @@ import ClipPath from "../assets/svg/ClipPath";
 import { cas } from "../assets/index.js";
 
 const CAS = () => {
-    // Courses sliced into different categories
     const sciencesCourses = cas_courses.slice(0, 6);
     const mathematicsCourses = cas_courses.slice(6, 8);
     const gerCourses = cas_courses.slice(8, 15);
     const engCourses = cas_courses.slice(15);
 
-    // State hooks for toggling visibility
     const [showSciences, setShowSciences] = useState(false);
     const [showMathematics, setShowMathematics] = useState(false);
     const [showGerCourses, setShowGerCourses] = useState(false);
     const [showEngCourses, setShowEngCourses] = useState(false);
 
-    // Toggle function
     const toggleCourses = (section) => {
-        switch (section) {
-            case 'sciences':
-                setShowSciences(!showSciences);
-                break;
-            case 'mathematics':
-                setShowMathematics(!showMathematics);
-                break;
-            case 'ger':
-                setShowGerCourses(!showGerCourses);
-                break;
-            case 'eng':
-                setShowEngCourses(!showEngCourses);
-                break;
-            default:
-                break;
-        }
+        setShowSciences(section === 'sciences' ? !showSciences : false);
+        setShowMathematics(section === 'mathematics' ? !showMathematics : false);
+        setShowGerCourses(section === 'ger' ? !showGerCourses : false);
+        setShowEngCourses(section === 'eng' ? !showEngCourses : false);
     };
 
-    // Function to render cards
     const renderCards = (courses) => (
         <div className="flex flex-wrap gap-10 mb-10">
             {courses.map((item) => (
@@ -83,7 +67,6 @@ const CAS = () => {
         </div>
     );
 
-
     return (
         <Section id="cas">
             <div className="container relative z-2">
@@ -124,5 +107,6 @@ const CAS = () => {
         </Section>
     );
 };
+
 export default CAS;
 
