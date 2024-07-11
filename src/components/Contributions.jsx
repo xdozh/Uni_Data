@@ -11,7 +11,7 @@ const Contributions = () => {
     const contributed = Contribution.slice(0, 3);
     const [showContributions, setShowContributions] = useState(false);
     const [showContributeButton, setShowContributeButton] = useState(false);
-    const [showFeedbackButton, setShowFeedbackButton] = useState(false);
+    const [showJotFormButton, setShowJotFormButton] = useState(false);
 
     const toggleContributions = () => {
         setShowContributions(!showContributions);
@@ -20,29 +20,52 @@ const Contributions = () => {
     const toggleContributeButton = () => {
         setShowContributeButton(!showContributeButton);
         if (!showContributeButton) {
-            setShowFeedbackButton(false);
+            setShowJotFormButton(false);
         }
     };
 
-    const toggleFeedbackButton = () => {
-        setShowFeedbackButton(!showFeedbackButton);
-        if (!showFeedbackButton) {
+    const toggleJotFormButton = () => {
+        setShowJotFormButton(!showJotFormButton);
+        if (!showJotFormButton) {
             setShowContributeButton(false);
         }
     };
 
     useEffect(() => {
-        if (showFeedbackButton || showContributeButton) {
-            const script = document.createElement('script');
-            script.src = "https://embed.typeform.com/next/embed.js";
-            script.async = true;
-            document.body.appendChild(script);
-
-            return () => {
-                document.body.removeChild(script);
-            };
+        let contributeScript;
+        if (showContributeButton) {
+            contributeScript = document.createElement('script');
+            contributeScript.src = "https://form.jotform.com/jsform/241913278858469";
+            contributeScript.async = true;
+            document.getElementById("contribute-container").appendChild(contributeScript);
         }
-    }, [showFeedbackButton, showContributeButton]);
+
+        return () => {
+            if (contributeScript) {
+                contributeScript.remove();
+                const contributeEmbed = document.getElementById("contribute-container");
+                if (contributeEmbed) contributeEmbed.innerHTML = "";
+            }
+        };
+    }, [showContributeButton]);
+
+    useEffect(() => {
+        let jotformScript;
+        if (showJotFormButton) {
+            jotformScript = document.createElement('script');
+            jotformScript.src = "https://form.jotform.com/jsform/241913335377459";
+            jotformScript.async = true;
+            document.getElementById("jotform-container").appendChild(jotformScript);
+        }
+
+        return () => {
+            if (jotformScript) {
+                jotformScript.remove();
+                const jotformEmbed = document.getElementById("jotform-container");
+                if (jotformEmbed) jotformEmbed.innerHTML = "";
+            }
+        };
+    }, [showJotFormButton]);
 
     const renderCards = (courses) => (
         <div className="flex flex-wrap gap-10 mb-10">
@@ -116,32 +139,26 @@ const Contributions = () => {
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                         onClick={toggleContributeButton}
                     >
-                        {showContributeButton ? "Hide Contribute" : "Contribute"}
+                        {showContributeButton ? "Hide Contribute" : "Contribute Here"}
                     </button>
                     <button
                         className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
-                        onClick={toggleFeedbackButton}
+                        onClick={toggleJotFormButton}
                     >
-                        {showFeedbackButton ? "Hide Feedback" : "Give Feedback"}
+                        {showJotFormButton ? "Hide Feedback" : "Give us Feedback"}
                     </button>
                 </div>
 
                 <div className="relative flex justify-center mt-10">
                     {showContributeButton && (
-                        <div className="w-full max-w-2xl mx-auto" dangerouslySetInnerHTML={{
-                            __html: `
-                                    <div data-tf-live="01J2E8QKYYE2Q38202VV7P592B" style="width: 100%; height: 100%;"></div>
-                                `,
-                        }}
-                        />
+                        <div className="w-full max-w-2xl mx-auto">
+                            <div id="contribute-container"></div>
+                        </div>
                     )}
-                    {showFeedbackButton && (
-                        <div className="w-full max-w-2xl mx-auto" dangerouslySetInnerHTML={{
-                            __html: `
-                                    <div data-tf-live="01J2E6M47R7X71ZP0XRRNTSN4R" style="width: 100%; height: 100%;"></div>
-                                `,
-                        }}
-                        />
+                    {showJotFormButton && (
+                        <div className="w-full max-w-2xl mx-auto">
+                            <div id="jotform-container"></div>
+                        </div>
                     )}
                 </div>
 
@@ -152,5 +169,3 @@ const Contributions = () => {
 };
 
 export default Contributions;
-
-
