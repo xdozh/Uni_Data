@@ -4,7 +4,6 @@ import {
     disc02,
     discord,
     discordBlack,
-    facebook,
     figma,
     file02,
     framer,
@@ -23,8 +22,6 @@ import {
     searchMd,
     slack,
     sliders04,
-    telegram,
-    twitter,
     yourlogo,
     cmp_coe,
     cve,
@@ -409,34 +406,17 @@ export const sba_courses = [
 ];
 
 export const socials = [
-    {
+    /*{
         id: "0",
         title: "Discord",
         iconUrl: discordBlack,
         url: "#",
     },
-    {
-        id: "1",
-        title: "Twitter",
-        iconUrl: twitter,
-        url: "#",
-    },
+    */
     {
         id: "2",
         title: "Instagram",
         iconUrl: instagram,
-        url: "#",
-    },
-    {
-        id: "3",
-        title: "Telegram",
-        iconUrl: telegram,
-        url: "#",
-    },
-    {
-        id: "4",
-        title: "Facebook",
-        iconUrl: facebook,
-        url: "#",
+        url: "https://www.instagram.com/resource_lib.aus/",
     },
 ];
